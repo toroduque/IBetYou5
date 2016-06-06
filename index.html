@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="betYou5">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+
+    <title>Bet you 5 - Simple way to bet with friends</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/betyou5.css">
+  </head>
+
+
+  <body ng-controller="GameController">
+    <nav class="navbar navbar-default main-navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" ng-click="mainMenu = 'index'">
+            <img id="main-logo" alt="Bet You 5" src="images/logo-navbar.png">
+          </a>
+          <div class="pull-right">
+            <a href="#"><p>Contact me</p></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-default sub-navbar">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Menu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#" ng-click="mainMenu = 'createPlayers'"> > New game</a></li>
+            <li><a href="#" ng-click="mainMenu = 'help'"> > Help</a></li>
+            <li><a href="#" ng-click="mainMenu = 'about'"> > About</a></li>
+            <li><a href="#" ng-click="mainMenu = 'contact'"> > Contact Me</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+      <section class="welcomeMenu" ng-init="mainMenu = 'index'" ng-show="mainMenu === 'index'">
+        <center>
+            <p>Welcome to</p>
+            <img src="images/logo-navbar.png">
+            <p>A simple way to bet <br> small things with your friends</p>
+            <img src="images/dice-main.png">
+            <br>
+            <button class="btn btn-default btn-start" type="submit" ng-click="mainMenu = 'createPlayers'">Start New Game</button>
+        </center>
+      </section>
+
+      <section class="createNew" ng-show="mainMenu === 'createPlayers'">
+         <h3>Start a New Game</h3>
+        <p>player one name</p>
+        <input type="text" ng-model="namePlayer1" placeholder="Player 1 Name">
+        <p>player two name</p>
+        <input type="text" placeholder="Player 2 Name" ng-model="namePlayer2">
+        <br>
+        <center><button class="btn btn-default btn-setScore" type="submit" ng-click="mainMenu = 'setScore'">Set Max Score</button></center>
+      </section>
+
+      <section class="createNew" ng-show="mainMenu === 'setScore'">
+          <h3>Start a New Game</h3>
+          <br>
+          <br>
+          <br>
+          <p>Set Maximum Score</p>
+          <input type="text" name="maxScore" placeholder="{{ maxScore }} by default" ng-model="maxScore">
+          <br>
+          <br>
+          <br>
+          <center><button class="btn btn-default btn-setScore" type="submit" ng-click="mainMenu = 'startGame'">Start New Game</button></center>
+      </section>
+
+      <section class="game" ng-show="mainMenu === 'startGame'">
+        <center>
+          <h3>{{ playerNameTurn }}</h3>
+          <p>it's your turn!</p>
+          <img src="images/die{{dice1}}.png">
+          <img src="images/die{{dice2}}.png">
+          <br>
+          <h4>You've scored {{  diceTotal }} points!</h4>
+          <button class="btn btn-default btn-start" type="submit" ng-click="rollDice()" >Roll Dice!</button>
+          <!-- Current Scores-->
+          <div class="row currentScore">
+            <div class="col-md-offset-1 col-md-5 col-xs-5" id="scoreP1">
+              <p>{{namePlayer1}}'s <br> Score</p>
+              <h4>{{ scoreP1 }} / {{ maxScore }}</h4>
+              <p>points</p>
+            </div>
+            <div class="col-xs-5" id="scoreP2">
+              <p>{{ namePlayer2 }}'s <br> Score</p>
+              <h4>{{ scoreP2 }} / {{ maxScore }}</h4>
+              <p>points</p>
+            </div>
+          </div>
+        </center>
+      </section>
+
+      <section class="createNew" ng-show="mainMenu === 'stats'">
+        <h3>Games has finished!</h3>
+        <br>
+        <br>
+        <br>
+        <p>{{ namePlayer1}} has scored {{ scoreP1 }}</p>
+        <p>{{ namePlayer2}} has scored {{ scoreP2 }}</p>
+        <br>
+        <br>
+        <br>
+        <center><button class="btn btn-default btn-setScore" type="submit" ng-click="gameStats()">Start New Game</button></center>
+      </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/betyou5.js"></script>
+  </body>
+</html>

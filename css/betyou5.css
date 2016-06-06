@@ -1,0 +1,264 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+/*-- BetYou5 CSS -- */
+
+* {
+  border-radius: 0 !important;
+}
+
+html, body { overflow-x: hidden; }
+
+body{
+	color: #a2a2a2;
+	background: #f8f8f8;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+.btn-start{
+	background: #f8f8f8;
+	border-color: #FF3B3F;
+	color: #FF3B3F;
+	margin: 35px 0;
+	width: 80%;
+}
+
+.btn-start:hover {
+	background: #ff3b3f;
+	border-color: #FF3B3F;
+	color: #f8f8f8;
+}
+
+.btn-start:focus {
+	background: #ff3b3f;
+	border-color: #FF3B3F;
+	color: #f8f8f8;
+}
+
+.btn-start:focus {
+	background: #ff3b3f;
+	border-color: #FF3B3F;
+	color: #f8f8f8;
+	outline: none !important;
+}
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover
+{
+    color: #f8f8f8;
+    background-color: #ff3b3f;
+    border-color: none;
+    background-image: none;
+  	outline: none !important;
+ 	 -webkit-box-shadow: none;
+         	 box-shadow: none;
+}
+
+.btn-start.active {
+	background: #f8f8f8;
+	border-color: #FF3B3F;
+	color: #FF3B3F;
+}
+
+.btn-setScore{
+	background:  #FF3B3F;
+	border-color: #f8f8f8;
+	color: #f8f8f8;
+	margin: 35px 0;
+	width: 80%;
+}
+
+.btn-setScore:focus {
+	background: #f8f8f8;
+	border-color: #FF3B3F;
+	color: #FF3B3F;
+	outline: none !important;
+}
+
+.btn-setScore:hover {
+	background: #f8f8f8;
+	border-color: #FF3B3F;
+	color: #FF3B3F;
+}
+
+.btn-setScore:active {
+	background: #f8f8f8;
+	border-color: #FF3B3F;
+	color: #FF3B3F;
+	outline: none !important;
+}
+
+
+.createNew{
+	background-color: #ff3b3f;
+	color: #f8f8f8;
+	padding: 7% 20%;
+}
+
+.createNew input{
+	background-color: #ff3b3f;
+	color: #f8f8f8;
+	outline: none !important;
+	border-style: none;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin: 5% 0;
+	width: 100%;
+	margin-bottom: 30px;
+	font-size: 1.5em;
+	padding-bottom: 10px;
+}
+
+.createNew input::-webkit-input-placeholder { color: #FF8B91; font-style: italic; }
+.createNew input:-moz-placeholder { color: #FF8B91; font-style: italic; }
+.createNew input::-moz-placeholder { color: #FF8B91; font-style: italic; }
+.createNew input:-ms-input-placeholder { color: #FF8B91; font-style: italic; }
+
+.createNew h3 {
+	margin: 30px 0 50px 0;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+}
+
+.createNew p {
+	font-style: italic;
+	margin-bottom: 30px;
+}
+
+.currentScore div {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FF3B3F;
+	margin: 0 0 10px 10px;
+	padding: 10px;
+}
+
+.currentScore > div {
+	left: 15px; 
+}
+
+.currentScore h4 {
+	color: #FF3B3F;
+	font-weight: 700;
+	font-size: 1.5em;
+	margin: 0;
+}
+
+.game h3 {
+	font-family: 'Pacifico', cursive;
+	color: #FF3B3F;
+	margin-top: 35px;
+	font-size: 2.5em;
+}
+
+.game h3 + p {
+	font-size: 1.3em;
+	margin-bottom: 50px;
+}
+
+.game h3 + p + img + br + h4{
+	margin: 35px 0;
+}
+
+.main-navbar img
+{
+	height: 35px;
+	margin: 10px;
+}
+
+.main-navbar a > p
+{
+	color: #FF3B3F;
+	border-color: #FF3B3F;
+	padding: 7px;
+	border-style: solid;
+	border-width: 1px;
+	margin: 20px 10px;
+	text-decoration: none;
+}
+
+.main-navbar a > p:hover
+{
+	background-color: #FF3B3F;
+	color: #F8f8f8;
+}
+
+.main-navbar a
+{
+	text-decoration: none;
+}
+
+
+.navbar
+{
+	margin-bottom: 0px;
+	border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #f8f8f8;
+}
+
+.navbar-default .navbar-nav > .active > a {
+	background-color: #FF3B3F;
+	color: #efefef;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+	background-color: #F9575F;
+	color: #f8f8f8;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #efefef;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	background-color: #F9575F;
+	color: #f8f8f8;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+	color: #efefef;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #f8f8f8;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background-color: #ff3b3f;
+}
+
+.sub-navbar
+{
+	background: #FF3B3F;
+	color: #efefef;
+	margin-bottom: 0px;
+}
+
+.sub-navbar .navbar-brand
+{
+	color: #efefef;
+}
+
+.welcomeMenu
+{
+	background: #f8f8f8;
+	margin-top: 0px;
+}
+
+.welcomeMenu p
+{
+	font-size: 1.5em;
+	margin: 45px 0 15px 0;
+}
+
+.welcomeMenu p + img + p
+{
+	font-size: 1.2em;
+	margin-bottom: 30px;
+}
