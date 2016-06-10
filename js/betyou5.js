@@ -11,7 +11,8 @@
 		$scope.dice1 = 0;
 		$scope.dice2 = 0;
 		$scope.playerTurn = false;
-		$scope.playerNameTurn = $scope.namePlayer2;
+		$scope.playerNameTurn = $scope.namePlayer1;
+		$scope.winner = "";
 
 		$scope.rollDice = function(){
 
@@ -26,6 +27,7 @@
 			
 
 			// Change between both player and sums according it player.
+			$scope.playerNameTurn = $scope.namePlayer1;
 			var newPlayerTurn = false;
 			
 			if ($scope.playerTurn === false){
@@ -49,18 +51,33 @@
 			}
 		}
 
-		$scope.gameStats = function(){
+		$scope.gameStats = function() {
 
-				$scope.scoreP1 = 0;
-				$scope.scoreP2 = 0;
-				$scope.maxScore = 200;
-				$scope.namePlayer1 = "";
-				$scope.namePlayer2 = "";
-				$scope.mainMenu = 'index';
+			var newWinner = "";
+
+			if ($scope.scoreP1 > $scope.scoreP2)
+				newWinner = $scope.namePlayer1;
+			else
+				newWinner = $scope.namePlayer2;
+
+			winner = newWinner;
+
+			return winner;
 		}
 
-		$scope.rollDice();
+		$scope.resetGame = function(){
+
+			$scope.scoreP1 = 0;
+			$scope.scoreP2 = 0;
+			$scope.maxScore = 200;
+			$scope.namePlayer1 = "";
+			$scope.namePlayer2 = "";
+			$scope.mainMenu = 'index';
+		}
+
 		$scope.gameStats();
+		$scope.resetGame();
+		$scope.rollDice();
 	
 
 	}]);

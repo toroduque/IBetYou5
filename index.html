@@ -113,15 +113,16 @@
 
       <section class="createNew" ng-show="mainMenu === 'stats'">
         <h3>Games has finished!</h3>
+        <h2>{{ gameStats() }} is the winner!</h2>
+        <br>
+        <center>
+          <p>{{ namePlayer1}} has scored {{ scoreP1 }}</p>
+          <p>{{ namePlayer2}} has scored {{ scoreP2 }}</p>
+        </center>
         <br>
         <br>
         <br>
-        <p>{{ namePlayer1}} has scored {{ scoreP1 }}</p>
-        <p>{{ namePlayer2}} has scored {{ scoreP2 }}</p>
-        <br>
-        <br>
-        <br>
-        <center><button class="btn btn-default btn-setScore" type="submit" ng-click="gameStats()">Start New Game</button></center>
+        <center><button class="btn btn-default btn-setScore" type="submit" ng-click="resetGame()">Start New Game</button></center>
       </section>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
