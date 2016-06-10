@@ -53,14 +53,11 @@
 
 		$scope.gameStats = function() {
 
-			var newWinner = "";
 
 			if ($scope.scoreP1 > $scope.scoreP2)
-				newWinner = $scope.namePlayer1;
+				winner = $scope.namePlayer1;
 			else
-				newWinner = $scope.namePlayer2;
-
-			winner = newWinner;
+				winner = $scope.namePlayer2;
 
 			return winner;
 		}

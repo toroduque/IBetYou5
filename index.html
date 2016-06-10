@@ -18,7 +18,7 @@
     <nav class="navbar navbar-default main-navbar">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#" ng-click="mainMenu = 'index'">
+          <a class="navbar-brand" href="#" ng-click="resetGame()">
             <img id="main-logo" alt="Bet You 5" src="images/logo-navbar.png">
           </a>
           <div class="pull-right">
@@ -86,7 +86,7 @@
           <center><button class="btn btn-default btn-setScore" type="submit" ng-click="mainMenu = 'startGame'">Start New Game</button></center>
       </section>
 
-      <section class="game" ng-show="mainMenu === 'startGame'">
+      <section class="game" ng-show="mainMenu === 'startGame'" ng-init="scoreP1 = 0">
         <center>
           <h3>{{ playerNameTurn }}</h3>
           <p>it's your turn!</p>
