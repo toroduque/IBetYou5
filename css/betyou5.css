@@ -9,7 +9,7 @@
 html, body { overflow-x: hidden; }
 
 body{
-	color: #a2a2a2;
+	color: green;
 	background: #f8f8f8;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
@@ -140,7 +140,7 @@ body{
 }
 
 .currentScore > div {
-	left: 15px; 
+	left: 15px;
 }
 
 .currentScore h4 {

@@ -3,8 +3,6 @@
 
 	app.controller('GameController', ['$scope', function($scope){
 
-		$scope.namePlayer1 = "";
-		$scope.namePlayer2 = "";
 		$scope.scoreP1 = 0;
 		$scope.scoreP2 = 0;
 		$scope.maxScore = 200;
@@ -12,7 +10,7 @@
 		$scope.dice2 = 0;
 		$scope.playerTurn = false;
 		$scope.playerNameTurn = $scope.namePlayer1;
-		$scope.winner = "";
+		$scope.winner;
 
 		$scope.rollDice = function(){
 
@@ -67,8 +65,8 @@
 			$scope.scoreP1 = 0;
 			$scope.scoreP2 = 0;
 			$scope.maxScore = 200;
-			$scope.namePlayer1 = "";
-			$scope.namePlayer2 = "";
+			$scope.namePlayer1;
+			$scope.namePlayer2;
 			$scope.mainMenu = 'index';
 		}
 
